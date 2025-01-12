@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ElyPrismLauncher · About</title>
+
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="icon" type="image/css" href="/assets/svg/org.prismlauncher.PrismLauncher.svg">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=0.75 user-scalable=no">
+  <meta name="theme-color" content="#207e5c">
+  <meta property="og:title" content="About">
+  <meta property="og:site_name" content="ElyPrismLauncher">
+  <meta property="og:description" content="About ElyPrismLauncher">
+  <meta property="og:image" content="/assets/png/org.prismlauncher.PrismLauncher.png">
+</head>
+<body>
+<div class="header">
+  <a href="/">
+    <img alt="ElyPrismLauncher" src="/assets/svg/org.prismlauncher.PrismLauncher.logo-darkmode.svg" draggable="false"></a>
+  <h1>About ElyPrismLauncher</h1>
+</div>
+<div class="content">
+  <h2>Overview</h2><hr>
+  <b>ElyPrismLauncher</b> is a custom launcher for Minecraft that was forked from Prism Launcher. This fork adds
+  integrated support for Ely.by accounts, while MSA accounts can still be used. This launcher allows the creation, and
+  management of multiple installations of the game, or "instances" rather, each having their own separate mods, resource
+  packs, settings, and more.
+  <br class="extended">
+  <h2>Why this fork?</h2><hr>
+  There are already quite a few forks out in the wild that add Ely.by support and/or disable the Microsoft account
+  requirement. This fork goes beyond simply adding a login-password prompt and authlib-injector download.
+  <ul>
+    <li>Modern and secure login: ElyPrismLauncher uses OAuth2 to log you in. This means that your credentials are never
+      transferred to the launcher. Instead, you log into your account on the official Ely.by page in the browser, and
+      Ely.by gives the launcher a token to access your account with limited privileges.</li>
+    <li>Skins support on servers: All other forks rely exclusively on authlib-injector to patch Minecraft to support
+      Ely.by. But authlib-injector can't provide skins on servers that don't have a special skins plugin installed.
+      ElyPrismLauncher uses Ely.by's official Authlib patches, allowing you to see skins anywhere.</li>
+  </ul>
+  <br><hr>
+  <sup>This project is <b>not</b> endorsed by Prism Launcher or Ely.by. </sup>
+</div>
+<div class="content">
+  <h2>ElyPrismLauncher Contributors</h2><hr>
+  <div class="contributor-list">
+    <div>
+      <a href="https://github.com/Octol1ttle">
+        <img alt="Octol1ttle" src="https://avatars.githubusercontent.com/u/61277953" draggable="false">
+      </a>
+      <span>
+        <b>Octol1ttle</b><br/>
+        ElyPrismLauncher Maintainer
+      </span>
+    </div>
+    <div>
+      <a href="https://github.com/mctaylors">
+        <img alt="mctaylors" src="https://avatars.githubusercontent.com/u/95250141">
+      </a>
+      <span>
+        <b>mctaylors</b> <small>Macintxsh</small><br/>
+        ElyPrismLauncher Designer & Web Developer
+      </span>
+    </div>
+    <br>
+  </div>
+  <a href="https://prismlauncher.org/about/#contributors">...and other Prism Launcher contributors</a>
+</div>
+<div class="footer">
+  <span class="left">
+    <img alt="EPL Logo" class="logo" src="/assets/svg/org.prismlauncher.PrismLauncher.svg" draggable="false">
+    ElyPrismLauncher
+    <a href="/">
+      <button><img alt="Home Icon" src="/assets/svg/home.svg">
+        Home
+      </button></a>
+    <button disabled title="You are here."><img alt="Help Icon" src="/assets/svg/help.svg">
+      About
+    </button>
+    <a href="https://discord.gg/5kcBCvnbTp">
+      <button><img alt="Discord Icon" src="/assets/svg/discord.svg">
+        Community
+      </button></a>
+    <a href="https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases/latest">
+      <button><img alt="Download Icon" src="/assets/svg/download.svg">
+        Download
+      </button></a>
+  </span>
+  <span class="right">
+    <a href="https://github.com/ElyPrismLauncher/ElyPrismLauncher">
+      <button>
+        <img alt="GitHub Icon" src="/assets/svg/github.svg">
+        ElyPrismLauncher/ElyPrismLauncher
+      </button></a>
+  </span>
+</div>
+</body>
+</html>
