@@ -108,15 +108,6 @@ button:disabled img {
   margin-top: 0;
 }
 
-.description {
-  white-space: pre-line;
-}
-
-.highlighted {
-  font-weight: bold;
-  font-style: italic;
-}
-
 .contributor-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
