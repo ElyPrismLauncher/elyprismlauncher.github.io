@@ -1,0 +1,3 @@
+[submodule "files"]
+	path = files
+	url = https://github.com/PrismLauncher/files.git
