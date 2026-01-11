@@ -1,3 +1,6 @@
 [submodule "files"]
 	path = files
 	url = https://github.com/PrismLauncher/files.git
+[submodule "meta/v1"]
+	path = meta/v1
+	url = https://github.com/ElyPrismLauncher/meta-launcher.git
