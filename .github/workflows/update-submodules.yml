@@ -1,0 +1,32 @@
+name: Update submodules
+
+on:
+  schedule:
+    - cron: '3 * * * *' # Wait 3 minutes for meta to update
+  workflow_dispatch:
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update submodules
+        run: |
+          git submodule update --remote --recursive
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git status --porcelain | grep .; then
+            git add .
+            git commit -m "Update submodules"
+            git push
+          else
+            echo "No submodule updates"
+          fi
