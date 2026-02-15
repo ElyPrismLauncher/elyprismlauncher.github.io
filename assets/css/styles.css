@@ -1,191 +1,247 @@
-@import url(fonts.css);
-
 :root {
-  --color: #eee;
-  --disabled-color: #777;
-  --background-color: #111;
-  --footer-color: #1117;
-  --link-color: #207e5c;
-  --link-color-hovered: #379070;
-
-  --border-color: #333;
-  --border-color-hover: #444;
-  --border-background-color: #222;
-  --border-background-color-hover: #333;
-  --border-radius: 4px;
+    /* todo: vars */
 }
 
 body {
-  background-color: var(--background-color);
-  color: var(--color);
-  font-family: 'JetBrains Mono', monospace;
-  margin: 80px 120px;
+    background-color: #141414;
+    max-width: 1000px;
+    min-width: 400px;
+    margin: 0 auto;
+    padding-top: 64px;
+    font-family: Inter, sans-serif;
+    color: hsl(0, 0%, 100%);
 }
 
-@media screen and (max-width:901px) {
-  body {
-    margin: 80px 40px;
-  }
+.block {
+    background-color: #282828;
+    border-radius: 16px;
+    padding: 8px 24px;
+    margin: 20px 0;
+    filter: drop-shadow(hsla(0, 0%, 0%, 25%) 0 8px 8px);
 }
 
-hr {
-  margin: -8px 0 12px;
+h1, h2 {
+    margin: 16px 0 4px;
 }
 
-br.extended {
-  margin-bottom: 16px;
+h1 {
+    font-weight: 900;
+    font-size: xx-large;
 }
 
-li {
-  margin-bottom: 8px;
+h2 {
+    font-weight: 900;
+    font-size: x-large;
 }
 
 a {
-  color: var(--link-color);
+    color: hsl(0, 0%, 100%);
 }
 
 a:hover {
-  color: var(--link-color-hovered);
+    color: hsl(0, 0%, 75%);
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
 }
 
 button {
-  color: var(--color);
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  font-family: 'JetBrains Mono', monospace;
-  padding: 4px 8px;
-  cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    border: 1px solid hsl(0, 0%, 50%);
+    background-color: #282828;
+    border-radius: 8px;
+    font-family: Inter, sans-serif;
+    padding: 4px 8px;
+    cursor: pointer;
 }
 
 button img {
-  height: 16px;
-  margin-bottom: -4px;
-  filter: invert(1);
+    height: 16px;
+    margin-bottom: -4px;
+    filter: invert(1);
 }
 
-button:hover {
-  border: 2px solid var(--border-color-hover);
-  background-color: var(--border-background-color-hover);
+button.icon-only {
+    height: 64px;
+    width: 64px;
 }
 
-button, button:focus {
-  border: 2px solid var(--border-color);
-  background-color: var(--border-background-color);
-}
-
-button:disabled {
-  color: var(--disabled-color);
-  border: 2px solid var(--border-color);
-  background-color: var(--border-color);
-  cursor: help !important;
+button.icon-only img {
+    height: 32px;
 }
 
 button:disabled img {
-  filter: invert(0.5);
+    filter: invert(0.5);
 }
 
-/* Header */
+/* this is fucked up */
 
-.header img {
-  height: 96px;
-  user-select: none;
+.header-container {
+    z-index: 100;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    max-width: 1000px;
+    width: 100%;
+    padding: 0;
 }
 
-/* Content */
-
-.content {
-  position: relative;
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 20px;
-  margin-top: 20px;
+.header {
+    height: 48px;
+    display: flex;
 }
 
-.content h1, .content h2,
-.content h3, .content h4,
-.content h5 {
-  /* this is so stupid */
-  margin-top: 0;
+.header button {
+    height: 48px;
+    font-size: 20px;
+    padding: 0 16px;
 }
 
-.contributor-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.header button > img {
+    height: 24px;
+    width: 24px;
+    margin-right: 4px;
 }
 
-.contributor-list > div {
-  margin-bottom: 8px;
-  display: flex;
+.header > div {
+    display: flex;
+    flex: 0 0 50%;
 }
 
-.contributor-list > div img {
-  height: 64px;
-  margin-right: 16px;
-  border-radius: 8px;
+.header-right {
+    justify-content: flex-end;
 }
 
-.contributor-list > div span {
-  margin-top: 12px;
+.header-blur {
+    z-index: 1;
+    height: 52px;
+    width: 100vw;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    mask: linear-gradient(black, transparent);
+    backdrop-filter: blur(8px);
 }
 
-@media screen and (max-width:901px) {
-  .contributor-list {
-    grid-template-columns: initial;
-  }
+.header-logo {
+    height: 48px;
+    width: 48px;
 }
 
-/* Footer */
+.header .button-row {
+    gap: 8px;
+}
+
+.header button.icon-only {
+    margin-top: 8px;
+    margin-right: 8px;
+    height: 24px;
+    width: 24px;
+    border: 0;
+}
+
+.header button.icon-only img {
+    height: 24px;
+}
+
+/**/
 
 .footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  padding: 0 120px 32px;
-  width: calc(100% - 120px * 2); /* full width - margin * 2 */
-  font-size: 12px;
-  cursor: default;
-  background-color: var(--footer-color);
-  backdrop-filter: blur(16px);
+    color: hsl(0, 0%, 75%);
+    font-size: small;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 32px; /* we're living in the world where home button is an iphone pill */
 }
 
-@media screen and (max-width:901px) {
-  .footer {
-    padding: 0 40px 16px;
-    width: calc(100% - 40px * 2); /* full width - viewport margin * 2 */
-  }
+.footer a {
+    color: hsl(0, 0%, 75%);
+    text-decoration: none;
 }
 
-.footer span {
-  /* cool viewport fix (hack) */
-  margin-top: 12px;
+.footer a:hover {
+    text-decoration: underline;
 }
 
-.footer button {
-  font-size: 12px;
+.footer > * {
+    margin: 0 8px;
 }
 
-.footer button img {
-  height: 12px;
-  margin-bottom: -2px;
+.footer-title {
+    display: inline-block;
 }
 
-.footer .logo {
-  height: 16px;
-  margin-bottom: -4px;
+@media screen and (width <= 1000px) {
+    .footer-title {
+        display: inherit;
+        margin-bottom: 4px;
+    }
 }
 
-.footer .shield {
-  margin-top: 4px;
+.focus, .message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: hsl(0, 0%, 100%);
 }
 
-.footer .left {
-  float: left;
-  text-align: left;
-  margin-right: 4px;
+.focus {
+    margin-top: 64px;
 }
 
-.footer .right {
-  float: right;
-  text-align: right;
-  margin-right: 4px;
+.focus > img {
+    margin-bottom: -100px;
+    width: 100%;
+    max-width: 800px;
+    mask: linear-gradient(black, black, transparent);
+}
+
+img.focus-logo {
+    margin-bottom: 16px;
+    width: 80%;
+    max-width: 400px;
+    mask: none;
+}
+
+.content {
+    padding-bottom: 24px;
+}
+
+.content .button-row {
+    margin: 8px 0 12px;
+}
+
+.message, .message-footer {
+    filter: invert(25%);
+}
+
+.message {
+    margin-top: 128px;
+}
+
+.message > img {
+    width: 80px;
+}
+
+.message > span {
+    font-weight: 600;
+    font-size: xx-large;
+}
+
+.message-footer {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 64px;
+    position: fixed;
+}
+
+.message-footer > span {
+    font-size: small;
 }
