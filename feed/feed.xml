@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://pineconemc.ru/</id>
+    <title>PineconeMC</title>
+    <updated>2026-03-09T12:11:57.354Z</updated>
+    <link rel="self" href="https://pineconemc.ru/feed/feed.xml"/>
+    <subtitle>This fork of Prism Launcher adds integrated support for Ely.by accounts</subtitle>
+    <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
+    <rights>AGPL-3.0</rights>
+    <entry>
+        <title type="html"><![CDATA[ElyPrismLauncher is rebranding]]></title>
+        <id>https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases</id>
+        <link href="https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases"/>
+        <updated>2026-02-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Now we're PineconeMC!]]></summary>
+        <content type="html"><![CDATA[<p>As you (hopefully) already know, ElyPrismLauncher is a fork of Prism Launcher. Not an original name for a fork, is it. It doesn&#39;t stand out and causes confusion between this fork and the original.</p><p>
+To stay true to the name, I&#39;ve deliberately avoided introducing changes that deviate from upstream Prism that aren&#39;t directly related to Ely. As time goes on this is blocking changes that could be helpful to users.</p>
+<p>This is why the launcher will be rebranding.</p>
+<p>The new name is PineconeMC (the new name comes from the fact that the Ely.by project is colloquially referred as &quot;Ёлка&quot; in Russian, meaning &quot;spruce tree&quot;. the spruce tree has cones - pinecones (that is not entirely accurate but close enough))</p>
+<p>To ensure that users are affected as little as possible by this transition, it will be done gradually.</p>
+<ul>
+<li>Only cosmetic changes will be performed at first. Old URLs will still work and file paths will remain the same</li>
+<li>Then, a release of the launcher will be made with functionality to automate the migration to the new name and URLs as much as possible</li>
+<li>Finally, all old URLs and remaining mentions of <code>ElyPrismLauncher</code> will be permanently removed</li>
+</ul>
+]]></content>
+        <author>
+            <name>PineconeMC Team</name>
+        </author>
+    </entry>
+</feed>
