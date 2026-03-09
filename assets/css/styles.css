@@ -197,6 +197,12 @@ button:disabled img {
     color: var(--white-1);
 }
 
+.formerly {
+    color: var(--white-2);
+    margin-top: -16px;
+    margin-bottom: 32px;
+}
+
 .focus {
     margin-top: 64px;
 }
