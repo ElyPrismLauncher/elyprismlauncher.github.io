@@ -8,9 +8,34 @@
     <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
     <rights>AGPL-3.0</rights>
     <entry>
+        <title type="html"><![CDATA[PineconeMC 11.0.0-pre2 is out]]></title>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases/11.0.0-pre2</id>
+        <link href="https://github.com/ElyPrismLauncher/Launcher/releases"/>
+        <updated>2026-04-04T10:57:00.000Z</updated>
+        <summary type="html"><![CDATA[Now works everywhere out of the box!]]></summary>
+        <content type="html"><![CDATA[
+        <p>See Prism Launcher changelogs:
+<a href="https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.0.0-pre2">https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.0.0-pre2</a>
+Important issues solved upstream:</p>
+<ul>
+<li>The launcher crashes when entering the <code>Mods</code>, <code>Resourcepacks</code> or <code>Shaderpacks</code> pages</li>
+<li>The launcher crashes when launching an instance on AppImage</li>
+</ul>
+<p>PineconeMC changes:</p>
+<ul>
+<li>The launcher will now automatically determine your connectivity to <code>pineconemc.ru</code> and will use the GitHub mirrors if needed. This process is transparent to the user. If connectivity restores, the launcher will switch back. This means some users will no longer have to manually switch meta servers and will now have news available</li>
+<li>The launcher now automatically supplies Java arguments that improve garbage collection performance. You can look at the supplied arguments or disable this feature in <code>Settings</code> -&gt; <code>Java</code></li>
+</ul>
+<p><strong>This is a development build. Make sure to back up your instances.</strong></p>
+]]></content>
+        <author>
+            <name>PineconeMC Team</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[ElyPrismLauncher is rebranding]]></title>
-        <id>https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases</id>
-        <link href="https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases"/>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases</id>
+        <link href="https://github.com/ElyPrismLauncher/Launcher/releases"/>
         <updated>2026-02-14T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Now we're PineconeMC!]]></summary>
         <content type="html"><![CDATA[<p>As you (hopefully) already know, ElyPrismLauncher is a fork of Prism Launcher. Not an original name for a fork, is it. It doesn&#39;t stand out and causes confusion between this fork and the original.</p><p>
