@@ -2,7 +2,7 @@ name: Update submodules
 
 on:
   schedule:
-    - cron: '3 * * * *' # Wait 3 minutes for meta to update
+    - cron: '10 * * * *' # Wait 10 minutes for meta to update
   workflow_dispatch:
 
 jobs:
