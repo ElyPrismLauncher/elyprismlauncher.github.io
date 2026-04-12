@@ -8,6 +8,28 @@
     <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
     <rights>AGPL-3.0</rights>
     <entry>
+        <title type="html"><![CDATA[[IMPORTANT] PineconeMC 11.0.2 is out]]></title>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.2</id>
+        <link href="https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.2"/>
+        <updated>2026-04-12T18:27:00.000Z</updated>
+        <summary type="html"><![CDATA[Fixes an important updater bug]]></summary>
+        <content type="html"><![CDATA[
+<p>See Prism Launcher changelogs:</p>
+<ul>
+<li><a href="https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.0.1">https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.0.1</a></li>
+<li><a href="https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.0.2">https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.0.2</a></li>
+</ul>
+<p>PineconeMC changes:</p>
+<ul>
+<li>Adjusted garbage collection flags to further reduce stuttering on all GCs</li>
+</ul>
+<p><strong>This release fixes a critical updater bug (that PineconeMC narrowly dodged). If you do not update soon, the launcher&#39;s built-in updater will break and you&#39;ll have to update manually.</strong></p>
+]]></content>
+        <author>
+            <name>PineconeMC Team</name>
+        </author>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[PineconeMC 11.0.0 (stable) is out]]></title>
         <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.0</id>
         <link href="https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.0"/>
