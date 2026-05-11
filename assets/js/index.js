@@ -1,12 +1,12 @@
-const pinecone_version = fetch_version("ElyPrismLauncher", "Launcher")
+const pinecone_version = get_release_version_formatted("ElyPrismLauncher", "Launcher")
     .then(x => manipulate_element(x, "pinecone-version"));
-const freesm_version = fetch_version("FreesmTeam", "FreesmLauncher")
+const freesm_version = get_release_version_formatted("FreesmTeam", "FreesmLauncher")
     .then(x => manipulate_element(x, "freesm-version"));
-const fjord_version = fetch_version("unmojang", "FjordLauncher")
+const fjord_version = get_release_version_formatted("unmojang", "FjordLauncher")
     .then(x => manipulate_element(x, "fjord-version"));
-const shattered_version = fetch_version("Noctilune", "ShatteredPrism")
+const shattered_version = get_release_version_formatted("Noctilune", "ShatteredPrism")
     .then(x => manipulate_element(x, "shattered-version"));
-const poly_version = fetch_version("PolyMC", "PolyMC")
+const poly_version = get_release_version_formatted("PolyMC", "PolyMC")
     .then(x => manipulate_element(x, "poly-version"));
 
 function manipulate_element(x, id) {

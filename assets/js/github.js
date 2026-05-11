@@ -1,4 +1,4 @@
-async function fetch_version(owner, repo) {
+async function get_release_version_formatted(owner, repo) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
         const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
@@ -10,11 +10,7 @@ async function fetch_version(owner, repo) {
         document.cookie = `${owner}_${repo}_ts=${timestamp};max-age=86400`;
     }
 
-    const tag = get_cookie_value(`${owner}_${repo}_tag`);
-
-    const ms = get_cookie_value(`${owner}_${repo}_ts`);
-
-    return [tag, Number(ms)];
+    return [get_cookie_value(`${owner}_${repo}_tag`), Number(get_cookie_value(`${owner}_${repo}_ts`))];
 }
 
 function get_cookie_value(name) {

@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#37876A">
+    <meta property="og:title" content="Download">
+    <meta property="og:site_name" content="PineconeMC">
+    <meta property="og:image" content="/assets/png/icon_256.png">
+    <meta property="og:description" content="Download PineconeMC for Windows, macOS or Linux.">
+
+    <link rel="icon" href="/assets/svg/icon.svg">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+          rel="stylesheet">
+
+    <title>PineconeMC</title>
+</head>
+<body>
+<div class="focus">
+</div>
+<div class="header-blur"></div>
+<div class="header-container">
+    <div class="block header">
+        <div class="header-left">
+            <a href="/">
+                <img src="/assets/svg/icon.svg" alt="PineconeMC" class="header-logo" draggable="false">
+            </a>
+        </div>
+    </div>
+</div>
+<div class="block content">
+    <h1><a href="/"><img src="/assets/svg/arrow_back.svg" class="how title" draggable="false"></a>Download</h1>
+    <div class="center" style="background-color: var(--black-2); padding: 20px; border-radius: 16px;">
+        This release <i>should be</i> compatible with your OS:
+        <br><br>
+        <a id="download-link"><button><img src="/assets/svg/download.svg" alt=""> <span id="download-span">...</span></button></a>
+    </div>
+    Other downloads:
+    <table class="downloads">
+        <caption>
+            <code id="version">...</code>
+            <br>
+            <small>Fetching from <a id="github-api-link">
+                <!-- fuck -->
+                <img src="/assets/svg/github.svg" alt="GitHub"
+                     style="height: 12px;
+                     margin-bottom: -2px;
+                     padding-right: 4px;
+                     filter: invert(1);"/>API
+            </a></small>
+        </caption>
+        <thead>
+        <tr>
+            <th rowspan="2" scope="row"></th>
+            <th colspan="2" scope="col"><img src="/assets/svg/windows.svg" class="how" alt=""> Windows</th>
+            <th rowspan="2" scope="col"><img src="/assets/svg/apple.svg" class="how" alt=""> macOS</th>
+            <th rowspan="2" scope="col">Linux</th>
+        </tr>
+        <tr>
+            <th>MSVC</th>
+            <th>MinGW</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">x64</th>
+            <td>
+                <a id="msvc-64-setup">
+                    <button><img src="/assets/svg/install_desktop.svg" alt=""> Setup</button>
+                </a>
+                <a id="msvc-64-portable">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Portable</button>
+                </a>
+            </td>
+            <td>
+                <a id="mingw-64-setup">
+                    <button><img src="/assets/svg/install_desktop.svg" alt=""> Setup</button>
+                </a>
+                <a id="mingw-64-portable">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Portable</button>
+                </a>
+            </td>
+            <td rowspan="2">
+                <a id="macos-dmg">
+                    <button><img src="/assets/svg/hard_drive.svg" alt=""> Disk Image <sup>.dmg</sup></button>
+                </a>
+                <br>
+                <a id="macos-zip">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Portable <sup>.zip</sup></button>
+                </a>
+            </td>
+            <td>
+                <a id="linux-64-appimage">
+                    <button><img src="/assets/svg/apk_document.svg" alt=""> AppImage</button>
+                </a>
+                <a id="linux-64-portable">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Qt6 Portable <sup>.tar.gz</sup></button>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">ARM64</th>
+            <td>
+                <a id="msvc-arm-setup">
+                    <button><img src="/assets/svg/install_desktop.svg" alt=""> Setup</button>
+                </a>
+                <a id="msvc-arm-portable">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Portable</button>
+                </a>
+            </td>
+            <td>
+                <a id="mingw-arm-setup">
+                    <button><img src="/assets/svg/install_desktop.svg" alt=""> Setup</button>
+                </a>
+                <a id="mingw-arm-portable">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Portable</button>
+                </a>
+            </td>
+            <td>
+                <a id="linux-arm-appimage">
+                    <button><img src="/assets/svg/apk_document.svg" alt=""> AppImage</button>
+                </a>
+                <a id="linux-arm-portable">
+                    <button><img src="/assets/svg/folder_zip.svg" alt=""> Qt6 Portable <sup>.tar.gz</sup></button>
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <th scope="row">Other</th>
+            <td colspan="3" style="color: var(--white-3)">No releases</td>
+            <td>
+                <a href="https://aur.archlinux.org/packages/elyprismlauncher-bin">
+                    <button><img src="/assets/svg/archlinux.svg" alt=""> AUR <sup>-bin</sup></button>
+                </a>
+                <a href="flatpak+https://elyprismlauncher.github.io/flatpak/elyprismlauncher.flatpakref">
+                    <button><img src="/assets/svg/flatpak.svg" alt=""> Flatpak</button>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="footer">
+    <div class="footer-title">
+        © 2026 PineconeMC
+    </div>
+    <a href="/LICENSE">
+        License</a>
+    <a href="https://github.com/ElyPrismLauncher/Launcher">
+        Source code</a>
+    <a href="https://discord.gg/5kcBCvnbTp">
+        Discord</a>
+    <a href="https://github.com/ElyPrismLauncher/Launcher/releases/latest">
+        Download</a>
+</div>
+</body>
+<script src="/assets/js/github.js"></script>
+<script type="module" src="/assets/js/download.js"></script>
+</html>

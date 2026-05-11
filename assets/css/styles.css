@@ -21,6 +21,23 @@ body {
     color: hsl(0, 0%, 100%);
 }
 
+div.center {
+    margin: 16px 0;
+    text-align: center;
+    border: 1px solid var(--white-3);
+}
+
+div.center button {
+    font-size: xx-large;
+    font-weight: 900;
+    width: 480px;
+    height: 64px;
+}
+
+div.center button > img {
+    height: 32px;
+}
+
 code {
     font-family: "Google Sans Code", monospace;
 }
@@ -42,6 +59,29 @@ table {
     margin-left: 4px;
 }
 
+caption {
+    caption-side: bottom;
+    margin-top: 12px;
+}
+
+table.downloads button {
+    padding: 8px;
+    width: 200px;
+    margin: 4px 0;
+}
+
+table.downloads th[scope="row"] {
+    max-width: 60px;
+    min-width: 60px;
+}
+
+table.downloads td {
+    padding: 4px;
+    /* haxx */
+    min-width: 208px;
+    max-width: 208px;
+}
+
 th, td {
     border: 1px solid var(--white-3);
     padding: 8px;
@@ -53,7 +93,7 @@ th {
     background-color: var(--black-2);
 }
 
-th[scope="row"] {
+table.comparison th[scope="row"] {
     text-align: left;
 }
 
@@ -108,6 +148,10 @@ ol > li li, ul > li li {
     margin: 2px 0;
 }
 
+hr {
+    border: 1px solid var(--white-3);
+}
+
 .button-row {
     display: flex;
     justify-content: center;
@@ -118,17 +162,34 @@ ol > li li, ul > li li {
 button {
     color: var(--white-1);
     border: 1px solid var(--white-2);
-    background-color: var(--black-3);
+    background-color: transparent;
     border-radius: 8px;
     font-family: Inter, sans-serif;
     padding: 4px 8px;
     cursor: pointer;
 }
 
-button img {
+button img, img.how {
     height: 16px;
+    filter: saturate(0) brightness(0) invert(1);
+}
+
+img.title {
+    height: 28px;
+    padding-right: 4px;
+}
+
+button img {
     margin-bottom: -4px;
-    filter: invert(1);
+}
+
+img.what {
+    margin-bottom: -3px;
+    margin-right: 3px;
+}
+
+img.how {
+    margin-bottom: -2px;
 }
 
 button.icon-only {
