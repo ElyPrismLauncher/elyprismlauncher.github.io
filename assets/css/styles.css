@@ -5,6 +5,10 @@
     --black-1: hsl(0, 0%, 0%);
     --black-2: hsl(0, 0%, 8%);
     --black-3: hsl(0, 0%, 16%);
+    --green-1: hsl(100, 30%, 15%);
+    --yellow-1: hsl(40, 30%, 15%);
+    --red-1: hsl(0, 30%, 15%);
+    --blue-1: hsl(200, 30%, 15%);
 }
 
 body {
@@ -13,8 +17,12 @@ body {
     min-width: 400px;
     margin: 0 auto;
     padding-top: 64px;
-    font-family: Inter, sans-serif;
+    font-family: "Google Sans", sans-serif;
     color: hsl(0, 0%, 100%);
+}
+
+code {
+    font-family: "Google Sans Code", monospace;
 }
 
 .block {
@@ -23,6 +31,50 @@ body {
     padding: 8px 24px;
     margin: 20px 0;
     filter: drop-shadow(hsla(0, 0%, 0%, 25%) 0 8px 8px);
+}
+
+table {
+    border-collapse: collapse;
+    display: block;
+    overflow-x: scroll;
+    scrollbar-color: var(--white-3) transparent;
+    margin-top: 14px;
+    margin-left: 4px;
+}
+
+th, td {
+    border: 1px solid var(--white-3);
+    padding: 8px;
+    min-width: 140px;
+    max-width: 140px;
+}
+
+th {
+    background-color: var(--black-2);
+}
+
+th[scope="row"] {
+    text-align: left;
+}
+
+td {
+    text-align: center;
+}
+
+td.yes {
+    background-color: var(--green-1);
+}
+
+td.mixed {
+    background-color: var(--yellow-1);
+}
+
+td.no {
+    background-color: var(--red-1);
+}
+
+td.info {
+    background-color: var(--blue-1);
 }
 
 h1, h2 {
@@ -45,6 +97,15 @@ a {
 
 a:hover {
     color: var(--white-2);
+}
+
+ol > li, ul > li {
+    margin: 8px 0;
+}
+
+/* what the fuck??)))) xd */
+ol > li li, ul > li li {
+    margin: 2px 0;
 }
 
 .button-row {

@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
           rel="stylesheet">
 
     <title>PineconeMC</title>
@@ -28,9 +30,9 @@
             </a>
         </div>
         <div class="header-right">
-                <a href="https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases/latest">
-                    <button><img src="/assets/svg/download.svg" alt="" draggable="false">Download</button>
-                </a>
+            <a href="https://github.com/ElyPrismLauncher/ElyPrismLauncher/releases/latest">
+                <button><img src="/assets/svg/download.svg" alt="" draggable="false">Download</button>
+            </a>
         </div>
     </div>
 </div>
@@ -46,17 +48,141 @@
     <h1>Why this fork?</h1>
     There are already quite a few forks out in the wild that add <a href="https://ely.by">Ely.by</a> support and/or
     disable the Microsoft account requirement. This fork goes beyond simply adding a login-password prompt and
-    authlib-injector download.
-    <ul>
-        <li><b>Modern and secure login:</b> PineconeMC uses OAuth2 to log you in. This means that your credentials
-            are never transferred to the launcher. Instead, you log into your account on the official Ely.by page in the
-            browser, and Ely.by gives the launcher a token to access your account with limited privileges.
+    authlib-injector download.<br>
+    <b>Here's a <small><i>✨horizontally-scrollable✨</i></small> MultiMC-based launcher comparison table for your convenience:</b>
+    <table class="comparison-table">
+        <thead>
+        <tr>
+            <th></th>
+            <th scope="col">PineconeMC</th>
+            <th scope="col">Freesm Launcher</th>
+            <th scope="col">Fjord Launcher</th>
+            <th scope="col">Shattered Prism</th>
+            <th scope="col">PolyMC</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Offline Mode without a Microsoft account</th>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="no">No</td>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+        </tr>
+        <tr>
+            <th scope="row">Ely.by accounts</th>
+            <td class="yes">Yes</td>
+            <td class="yes">Yes</td>
+            <td class="info">Custom accounts</td>
+            <td class="info">Custom accounts</td>
+            <td class="info">Custom accounts</td>
+        </tr>
+        <tr>
+            <th scope="row">Skins support</th>
+            <td class="yes">Everywhere using official patches</td>
+            <td class="yes">Everywhere using official patches</td>
+            <td class="mixed">Singleplayer & LAN only</td>
+            <td class="mixed">Singleplayer & LAN only</td>
+            <td class="mixed">Singleplayer & LAN only</td>
+        </tr>
+        <tr>
+            <th scope="row">Secure OAuth2 authentication</th>
+            <td class="yes">MSA + Ely.by</td>
+            <td class="yes">MSA + Ely.by</td>
+            <td class="no">MSA only</td>
+            <td class="no">MSA only</td>
+            <td class="no">MSA only</td>
+        </tr>
+        <tr>
+            <th scope="row">Improved GC</th>
+            <td class="yes">Yes</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+            <td class="no">No</td>
+        </tr>
+        <tr>
+            <th scope="row">Latest release</th>
+            <td id="pinecone-version">...</td>
+            <td id="freesm-version">...</td>
+            <td id="fjord-version">...</td>
+            <td id="shattered-version">...</td>
+            <td id="poly-version">...</td>
+        </tr>
+        <tr>
+            <th scope="row">Based on</th>
+            <td>Prism Launcher</td>
+            <td>Prism Launcher</td>
+            <td>Prism Launcher</td>
+            <td>Fjord Launcher</td>
+            <td>MultiMC</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="block content">
+    <h1>Frequently Asked Questions</h1>
+    First of all, <b>DO NOT ASK QUESTIONS ABOUT THIS LAUNCHER IN THE OFFICIAL PRISM LAUNCHER GITHUB OR DISCORD</b>.<br>
+    If you'll ask a question mentioned down there on our Discord server <small>(and i hope not on GitHub Issues)</small>,
+    your message will be
+    removed with no further explanation.
+    <ol>
+        <li>
+            <div style="background-color: var(--black-2); padding: 20px; border-radius: 16px;)">
+                <b style="font-size: x-large">What should I download on
+                    <a href="https://github.com/ElyPrismLauncher/Launcher/releases">GitHub Releases</a> page???</b><br>
+                <b>If you're not sure what to download on Windows, click
+                    <code>PineconeMC-Windows-MSVC-Setup-*.exe</code></b><br>
+                In other cases, we hope you're familiar with your package manager and/or correct release finding skills.
+            </div>
         </li>
-        <li><b>Skins support on servers:</b> All other forks rely exclusively on authlib-injector to patch Minecraft to
-            support Ely.by. But authlib-injector can't provide skins on servers that don't have a special skins plugin
-            installed. PineconeMC uses Ely.by's official Authlib patches, allowing you to see skins anywhere
+        <li>
+            <b>Is it ElyPrismLauncher? What is this?</b><br>
+            See gray text under PineconeMC logo above these blocks.
         </li>
-    </ul>
+        <li>
+            <b>Is PineconeMC free? Why it launches demo version?</b>
+            <br>
+            You have to create a new account. It can be either Ely.by or offline one.
+        </li>
+        <li>
+            <b>Is PineconeMC safe? Does it have malware?</b>
+            <br>
+            It is, if you're downloading it from official sources, such as:
+            <!-- TODO: point straight to download pages when download pages will be
+                    uh
+                    made -->
+            <ul>
+                <li>
+                    <a href="https://pineconemc.ru">pineconemc.ru</a>
+                </li>
+                <li>
+                    <a href="https://elyprismlauncher.github.io">elyprismlauncher.github.io</a>
+                </li>
+                <li>
+                    <!-- hacky stuf!!!!! do not repet!!!!!!!!!!! -->
+                    <a href="https://github.com/ElyPrismLauncher/Launcher">
+                        <img src="/assets/svg/github.svg" alt="GitHub"
+                             style="height: 16px;
+                             margin-bottom: -2px;
+                             padding-right: 4px;
+                             filter: invert(1);"/>ElyPrismLauncher/Launcher
+                    </a>
+                </li>
+            </ul>
+            And you still can review and build launcher's source code by yourself.
+        </li>
+        <li>
+            <b>What servers can I join with an Ely.by/Offline account?</b>
+            <br>
+            Servers with <code>online-mode=false</code>.
+        </li>
+        <li>
+            <b>Why is my game not downloading? Why game downloading stuck at %</b><br>
+            Your ISP may block our domains. Try using a VPN and try downloading again.
+        </li>
+    </ol>
 </div>
 <div class="block content">
     <h1>Community & Support</h1>
@@ -89,4 +215,6 @@
         Download</a>
 </div>
 </body>
+<script src="/assets/js/github.js"></script>
+<script type="module" src="/assets/js/index.js"></script>
 </html>
