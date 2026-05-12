@@ -345,6 +345,10 @@ img.focus-logo {
     mask: none;
 }
 
+.focus .download-button {
+    margin-bottom: 24px;
+}
+
 .content {
     padding-bottom: 24px;
 }
