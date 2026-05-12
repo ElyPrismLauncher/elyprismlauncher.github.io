@@ -31,13 +31,13 @@ const baseurl = `https://github.com/ElyPrismLauncher/Launcher/releases/download/
 const os = detectOS();
 if (os === "windows") {
     download_a_element.href = `${baseurl}/PineconeMC-Windows-MSVC-Setup-${version}.exe`;
-    download_span_element.innerHTML = "<small>Windows<sup>64, MSVC</sup></small> Setup";
+    download_span_element.innerHTML = "<small>Windows<sup>x64, MSVC</sup></small> Setup";
 } else if (os === "macos") {
     download_a_element.href = `${baseurl}/PineconeMC-macOS-${version}.dmg`;
     download_span_element.innerHTML = "<small>macOS</small> Disk Image";
 } else {
     download_a_element.href = `${baseurl}/PineconeMC-Linux-x86_64.AppImage`;
-    download_span_element.innerHTML = "<small>Linux<sup>86_64</sup></small> AppImage";
+    download_span_element.innerHTML = "<small>Linux<sup>x64</sup></small> AppImage";
 }
 
 document.getElementById("linux-64-appimage").href = `${baseurl}/PineconeMC-Linux-x86_64.AppImage`;
