@@ -166,7 +166,7 @@ button {
     border: 1px solid var(--white-2);
     background-color: transparent;
     border-radius: 8px;
-    font-family: Inter, sans-serif;
+    font-family: "Google Sans", sans-serif;
     padding: 4px 8px;
     cursor: pointer;
 }
