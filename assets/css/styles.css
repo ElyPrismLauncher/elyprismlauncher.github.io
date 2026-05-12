@@ -173,7 +173,7 @@ button {
 
 button img, img.how {
     height: 16px;
-    filter: saturate(0) brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
 
 img.title {
@@ -358,7 +358,7 @@ img.focus-logo {
 }
 
 .message, .message-footer {
-    filter: invert(25%);
+    filter: brightness(0) invert(0.5);
 }
 
 .message {
