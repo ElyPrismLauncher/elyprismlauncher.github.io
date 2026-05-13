@@ -13,6 +13,11 @@ async function get_release_version_formatted(owner, repo) {
     return [get_cookie_value(`${owner}_${repo}_tag`), Number(get_cookie_value(`${owner}_${repo}_ts`))];
 }
 
+async function fetch_release_version(owner, repo) {
+    const json = await (await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`)).json();
+    return json.tag_name;
+}
+
 function get_cookie_value(name) {
     return document.cookie.split("; ").find((row) => row.startsWith(`${name}=`))?.split("=")[1];
 }

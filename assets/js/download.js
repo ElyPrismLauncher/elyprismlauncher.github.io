@@ -14,16 +14,11 @@ function detectOS() {
     return "linux";
 }
 
-async function fetch_epl_release_version(owner, repo) {
-    const json = await (await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`)).json();
-    return json.tag_name;
-}
-
 const owner = "ElyPrismLauncher";
 const repo = "Launcher";
 document.getElementById("github-api-link").href = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
 
-const version = await fetch_epl_release_version(owner, repo);
+const version = await fetch_release_version(owner, repo);
 document.getElementById("version").innerText = version;
 
 const baseurl = `https://github.com/ElyPrismLauncher/Launcher/releases/download/${version}`
