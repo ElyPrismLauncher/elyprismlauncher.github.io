@@ -1,7 +1,7 @@
 const owner = "ElyPrismLauncher";
 const repo = "Launcher";
 
-async function get_release_version_formatted(owner, repo, getOnlyTag) {
+async function get_release_version(owner, repo, getOnlyTag = false) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
         const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
