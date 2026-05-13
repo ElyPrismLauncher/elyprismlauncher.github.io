@@ -16,7 +16,8 @@ function detectOS() {
 
 document.getElementById("github-api-link").href = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
 
-const version = await fetch_release_version(owner, repo);
+const version = await get_release_version_formatted(owner, repo, true);
+console.log(version);
 document.getElementById("version").innerText = version;
 
 const baseurl = `https://github.com/${owner}/${repo}/releases/download/${version}`
