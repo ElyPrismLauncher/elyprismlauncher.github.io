@@ -14,14 +14,12 @@ function detectOS() {
     return "linux";
 }
 
-const owner = "ElyPrismLauncher";
-const repo = "Launcher";
 document.getElementById("github-api-link").href = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
 
 const version = await fetch_release_version(owner, repo);
 document.getElementById("version").innerText = version;
 
-const baseurl = `https://github.com/ElyPrismLauncher/Launcher/releases/download/${version}`
+const baseurl = `https://github.com/${owner}/${repo}/releases/download/${version}`
 
 const os = detectOS();
 if (os === "windows") {

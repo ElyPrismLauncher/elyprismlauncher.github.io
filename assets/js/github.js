@@ -1,3 +1,6 @@
+const owner = "ElyPrismLauncher";
+const repo = "Launcher";
+
 async function get_release_version_formatted(owner, repo) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
