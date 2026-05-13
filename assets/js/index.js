@@ -27,9 +27,4 @@ function manipulate_element(x, id) {
     }
 }
 
-const version = await fetch_release_version(owner, repo);
-const baseurl = `https://github.com/${owner}/${repo}/releases/download/${version}`;
-document.getElementById("msvc-64-setup-faq").href = `${baseurl}/PineconeMC-Windows-MSVC-Setup-${version}.exe`;
-document.getElementById("msvc-64-setup-faq").innerText = `PineconeMC-Windows-MSVC-Setup-${version}.exe`; 
-
 await Promise.allSettled([pinecone_version, freesm_version, fjord_version, shattered_version, poly_version])
