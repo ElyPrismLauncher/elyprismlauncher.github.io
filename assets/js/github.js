@@ -1,4 +1,7 @@
-async function get_release_version_formatted(owner, repo) {
+const owner = "ElyPrismLauncher";
+const repo = "Launcher";
+
+async function get_release_version(owner, repo, getOnlyTag = false) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
         const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
@@ -8,6 +11,10 @@ async function get_release_version_formatted(owner, repo) {
 
         document.cookie = `${owner}_${repo}_tag=${data.tag_name};max-age=86400`;
         document.cookie = `${owner}_${repo}_ts=${timestamp};max-age=86400`;
+    }
+
+    if (getOnlyTag) {
+        return [get_cookie_value(`${owner}_${repo}_tag`)];
     }
 
     return [get_cookie_value(`${owner}_${repo}_tag`), Number(get_cookie_value(`${owner}_${repo}_ts`))];
