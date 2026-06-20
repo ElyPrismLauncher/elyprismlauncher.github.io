@@ -8,6 +8,25 @@
     <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
     <rights>AGPL-3.0</rights>
     <entry>
+        <title type="html"><![CDATA[Beware of fake websites!]]></title>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.2</id>
+        <link href="https://pineconemc.ru"/>
+        <updated>2026-06-20T17:26:00.000Z</updated>
+        <summary type="html"><![CDATA[There are more and more fake websites pretending to be PineconeMC]]></summary>
+        <content type="html"><![CDATA[
+<p>Malicious people are creating copies of the PineconeMC website and hosting them on domains purposefully selected to mislead users. These fake copies collect analytics without consent and insert advertisements to make money out of PineconeMC.</p>
+<p>Even though the fakes violate the website's license, the providers do not care. We have no control over them.</p>
+<br>
+<p>Please remember that these are the <strong>only</strong> official websites:</p>
+<ul>
+<li><a href="https://pineconemc.ru">https://pineconemc.ru</a></li>
+<li><a href="https://elyprismlauncher.github.io">https://elyprismlauncher.github.io</a></li>
+</ul>
+<br>
+<p>To protect yourself, <strong>always</strong> double-check the links you're opening (even if they're at the top of search results) and make sure you use an adblocker like "uBlock Origin".</p>
+        ]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[[IMPORTANT] PineconeMC 11.0.2 is out]]></title>
         <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.2</id>
         <link href="https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.2"/>
