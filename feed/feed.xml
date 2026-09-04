@@ -8,6 +8,21 @@
     <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
     <rights>AGPL-3.0</rights>
     <entry>
+        <title type="html"><![CDATA[PineconeMC 11.1.0 is out]]></title>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.1.0</id>
+        <link href="https://pineconemc.ru"/>
+        <updated>2026-09-04T14:53:00.000Z</updated>
+        <summary type="html"><![CDATA[He is, indeed, makuraslvt]]></summary>
+        <content type="html"><![CDATA[
+<p>See Prism Launcher changelogs:
+<a href="https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.1.0">https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.1.0</a></p>
+<p>PineconeMC changes:</p>
+<ul>
+<li>Updated credits</li>
+</ul>
+]]></content>
+    </entry>    
+    <entry>
         <title type="html"><![CDATA[Beware of fake websites!]]></title>
         <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.0.2</id>
         <link href="https://pineconemc.ru"/>
