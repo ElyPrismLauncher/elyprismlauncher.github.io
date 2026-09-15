@@ -7,7 +7,7 @@ async function get_release_version(owner, repo, getPineconeTag = false) {
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
 
         let res;
-        try{
+        try {
             res = await fetch(
                 `https://api.github.com/repos/${owner}/${repo}/releases/latest`,
                 {signal: AbortSignal.timeout(3000)}
