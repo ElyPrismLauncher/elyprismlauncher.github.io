@@ -31,6 +31,7 @@ async function get_release_version(owner, repo, getPineconeTag = false) {
             document.getElementById("fallback").href = `https://github.com/${owner}/${repo}/releases/${fallback_tag}`
             document.getElementById("github-latest").href = `https://github.com/${owner}/${repo}/releases/latest`
             document.getElementById("fallback-popup").style.display = "block";
+            document.getElementById("fetching-from-label").style.textDecoration = "line-through";
             return [fallback_tag];
         }
 
