@@ -1,12 +1,22 @@
 const owner = "ElyPrismLauncher";
 const repo = "Launcher";
+const fallback_tag = "11.1.0";
 
-async function get_release_version(owner, repo, getOnlyTag = false) {
+async function get_release_version(owner, repo, getPineconeTag = false) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
-        const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/releases/latest`);
-        
-        if (res.status === 200) {
+
+        let res;
+        try {
+            res = await fetch(
+                `https://api.github.com/repos/${owner}/${repo}/releases/latest`,
+                {signal: AbortSignal.timeout(3000)}
+            );
+        } catch (err) {
+            console.warn(err);
+        }
+
+        if (res !== undefined && res.status === 200) {
             const data = await res.json();
             const timestamp = Date.parse(data.published_at);
 
@@ -15,7 +25,16 @@ async function get_release_version(owner, repo, getOnlyTag = false) {
         }
     }
 
-    if (getOnlyTag) {
+    if (getPineconeTag) {
+        if (get_cookie_value(`${owner}_${repo}_tag`) === undefined) {
+            document.getElementById("fallback").innerText = fallback_tag;
+            document.getElementById("fallback").href = `https://github.com/${owner}/${repo}/releases/${fallback_tag}`
+            document.getElementById("github-latest").href = `https://github.com/${owner}/${repo}/releases/latest`
+            document.getElementById("fallback-popup").style.display = "block";
+            document.getElementById("fetching-from-label").style.textDecoration = "line-through";
+            return [fallback_tag];
+        }
+
         return [get_cookie_value(`${owner}_${repo}_tag`)];
     }
 
