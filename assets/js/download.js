@@ -1,10 +1,11 @@
-const download_a_element = document.getElementById("download-link");
-const download_span_element = document.getElementById("download-span");
+const version = "11.1.1";
+const owner = "ElyPrismLauncher";
+const repo = "Launcher";
 
 function detectOS() {
     const ua = navigator.userAgent.toLowerCase();
     const p = navigator.platform.toLowerCase();
-
+    
     if (ua.includes("windows") || p.includes("win")) {
         return "windows";
     }
@@ -14,9 +15,8 @@ function detectOS() {
     return "linux";
 }
 
-document.getElementById("github-api-link").href = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
-
-const version = await get_release_version(owner, repo, true);
+const download_a_element = document.getElementById("download-link");
+const download_span_element = document.getElementById("download-span");
 document.getElementById("version").innerText = version;
 
 const baseurl = `https://github.com/${owner}/${repo}/releases/download/${version}`
