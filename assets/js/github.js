@@ -1,6 +1,6 @@
 const owner = "ElyPrismLauncher";
 const repo = "Launcher";
-const fallback_tag = "11.1.0";
+const fallback_tag = "11.1.1";
 
 async function get_release_version(owner, repo, getPineconeTag = false) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
