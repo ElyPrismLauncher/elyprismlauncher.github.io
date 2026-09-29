@@ -5,6 +5,7 @@ const repo = "Launcher";
 function detectOS() {
     const ua = navigator.userAgent.toLowerCase();
     const p = navigator.platform.toLowerCase();
+    
     if (ua.includes("windows") || p.includes("win")) {
         return "windows";
     }
