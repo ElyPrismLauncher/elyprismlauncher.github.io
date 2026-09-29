@@ -2,7 +2,7 @@ async function get_release_version(owner, repo) {
     if (get_cookie_value(`${owner}_${repo}_tag`) === undefined
         || get_cookie_value(`${owner}_${repo}_ts`) === undefined) {
 
-        let res = await fetch(
+        const res = await fetch(
                 `https://api.github.com/repos/${owner}/${repo}/releases/latest`,
                 {signal: AbortSignal.timeout(3000)}
             );
