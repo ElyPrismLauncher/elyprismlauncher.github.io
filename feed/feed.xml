@@ -8,6 +8,19 @@
     <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
     <rights>AGPL-3.0</rights>
     <entry>
+        <title type="html"><![CDATA[PineconeMC 11.1.1 is out]]></title>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.1.1</id>
+        <link href="https://pineconemc.ru"/>
+        <updated>2026-09-29T15:52:00.000Z</updated>
+        <summary type="html"><![CDATA[oops]]></summary>
+        <content type="html"><![CDATA[
+<p><b>This is a hotfix release for a security vulnerability that appeared in 11.1.0.</b></p>
+<p>See Prism Launcher changelogs:
+<a href="https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.1.1">https://github.com/PrismLauncher/PrismLauncher/releases/tag/11.1.1</a></p>
+<p>No new PineconeMC changes</p>
+]]></content>
+    </entry>  
+    <entry>
         <title type="html"><![CDATA[PineconeMC 11.1.0 is out]]></title>
         <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.1.0</id>
         <link href="https://pineconemc.ru"/>
