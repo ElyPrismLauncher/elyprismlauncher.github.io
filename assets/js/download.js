@@ -1,4 +1,4 @@
-const version = "11.1.1";
+const version = "11.1.2";
 const owner = "ElyPrismLauncher";
 const repo = "Launcher";
 
