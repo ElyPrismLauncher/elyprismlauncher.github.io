@@ -7,6 +7,17 @@
     <subtitle>This fork of Prism Launcher adds integrated support for Ely.by accounts</subtitle>
     <logo>https://pineconemc.ru/assets/png/icon_256.png</logo>
     <rights>AGPL-3.0</rights>
+        <entry>
+        <title type="html"><![CDATA[PineconeMC 11.1.2 is out]]></title>
+        <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.1.2</id>
+        <link href="https://pineconemc.ru"/>
+        <updated>2026-11-04T09:40:00.000Z</updated>
+        <summary type="html"><![CDATA[Now with working Ely.by authentication!]]></summary>
+        <content type="html"><![CDATA[
+<p><b>This release fixes Ely.by authentication.</b></p>
+<p>If you used a custom Ely.by application ID, please unset it.</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[PineconeMC 11.1.1 is out]]></title>
         <id>https://github.com/ElyPrismLauncher/Launcher/releases/tag/11.1.1</id>
