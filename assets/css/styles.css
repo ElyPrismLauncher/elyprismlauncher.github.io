@@ -361,15 +361,11 @@ img.focus-logo {
     margin: 8px 0 12px;
 }
 
-.message, .message-footer {
-    filter: brightness(0) invert(0.5);
-}
-
 .message {
     margin-top: 128px;
 }
 
-.message > img {
+.message img {
     width: 80px;
 }
 
@@ -385,6 +381,27 @@ img.focus-logo {
     position: fixed;
 }
 
+.message-footer img {
+    width: 40px;
+}
+
 .message-footer > span {
     font-size: small;
+}
+
+.message, .message-footer, .message-footer a {
+    color: var(--white-3);
+    text-align: center;
+}
+
+.message-footer a:hover {
+    color: var(--white-1);
+}
+
+.message-footer a:active {
+    color: var(--white-2);
+}
+
+.message img, .message-footer img {
+    filter: brightness(0) invert(0.5);
 }
